@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState, useRef } from "react";
 import circle1 from "../../../public/images/circle.gif";
 import Image from "next/image";
 import play from "../../../public/images/Play.gif";
@@ -7,8 +9,54 @@ import { Button } from "@/components/ui/button";
 import playLeft from "../../../public/images/Playleft.png";
 import playRight from "../../../public/images/playRight.png";
 import AnimatedButton from "../ui/AnimatedButton";
+import emailjs from "@emailjs/browser";
 
 const HeroSection = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // EmailJS configuration
+  const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_kjzof7p';
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_87xmj99';
+  const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'LmM-_j9Cdkh4wvADu';
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) {
+      setMessage("Please enter your email address");
+      return;
+    }
+
+    setIsLoading(true);
+    setMessage("");
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(PUBLIC_KEY);
+
+      const templateParams = {
+        user_email: email,
+        to_name: "Dubio Team",
+        from_name: email,
+        message: `New waitlist signup from: ${email}`,
+        timestamp: new Date().toISOString(),
+      };
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+      
+      setMessage("Successfully joined the waitlist! We'll contact you soon.");
+      setEmail("");
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-[1920px] mx-auto h-max lg:py-0 py-32 lg:h-[100vh] flex items-center">
       <div className="max-w-[85%] mx-auto">
@@ -24,21 +72,30 @@ const HeroSection = () => {
             </p>
 
             {/* Email Input and Join Waitlist Button */}
-            <div className="relative mt-10">
+            <form ref={formRef} onSubmit={handleSubmit} className="relative mt-10">
               <Input
                 type="email"
                 placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full relative bg-[#2A1F3A] border-[#3D2A50] text-white placeholder:text-gray-400 h-12 sm:h-14 md:h-16 lg:h-[70px] px-6 rounded-full"
+                disabled={isLoading}
               />
               <div className="lg:w-max w-full flex justify-center items-center">
-                <Button className="sm:absolute justify-self-center m-auto w-max right-5 lg:right-4 h-max top-1/2 sm:mt-0 mt-4 sm:-translate-y-1/2 bg-transparent hover:bg-transparent p-0">
+                <Button 
+                  type="submit"
+                  disabled={isLoading}
+                  className="sm:absolute justify-self-center m-auto w-max right-5 lg:right-4 h-max top-1/2 sm:mt-0 mt-4 sm:-translate-y-1/2 bg-transparent hover:bg-transparent p-0"
+                >
                   <AnimatedButton />
                 </Button>
               </div>
-              {/* <Button className=" absolute right-0 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent">
-                <AnimatedButton />
-              </Button> */}
-            </div>
+              {message && (
+                <p className={`mt-4 text-sm ${message.includes("Successfully") ? "text-green-400" : "text-red-400"}`}>
+                  {message}
+                </p>
+              )}
+            </form>
           </div>
           <div className="relative max-w-full lg:col-span-1">
             {/* <div className="absolute -z-10 2xl:-top-[420px] -top-[200px] left-[130%] -translate-x-1/2 2xl:w-[2010px] 2xl:h-[1217px] w-[1010px] h-[717px] object-cover"> */}
