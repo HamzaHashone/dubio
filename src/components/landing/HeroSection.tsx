@@ -1,7 +1,7 @@
 import React from "react";
 import circle1 from "@/images/circle.gif";
 import Image from "next/image";
-import play from "@/images/Play.gif";
+import play from "../../images/Play.gif";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import playLeft from "@/images/Playleft.png";
@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <div className="max-w-[1920px] mx-auto h-[100vh] flex items-center">
       <div className="max-w-[85%] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-40 ">
+        {/* <div className="grid lg:grid-cols-2 gap-40 "> */}
           <div className="my-auto">
             <h1 className="text-white 2xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl font-bold">
               Dub Your Content into Any Language In Your Own Voice
@@ -23,7 +23,7 @@ const HeroSection = () => {
               using AI dubbing and voice cloning — all in seconds.
             </p>
 
-            {/* Email Input and Join Waitlist Button ,*/}
+            {/* Email Input and Join Waitlist Button */}
             <div className="relative mt-10">
               <Input
                 type="email"
@@ -67,7 +67,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
