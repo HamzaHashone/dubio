@@ -62,43 +62,43 @@
 //     };
 //   }, []);
 
-  // const cardData = [
-  //   {
-  //     title: "Core Dubbing",
-  //     description:
-  //       "Paste any video link  Dubio dubs it in your voice, with subtitles and lip-sync. No uploads, no editing. Just magic",
-  //     icon: ai,
-  //     side: "left",
-  //   },
-  //   {
-  //     title: " Shareability & Branding",
-  //     description:
-  //       "Every dubbed video is ready to share with one click   complete with light branding to boost your reach",
-  //     icon: ai1,
-  //     side: "right",
-  //   },
-  //   {
-  //     title: "Podcast Dubbing",
-  //     description:
-  //       "Dub your episodes into any language same voice, same vibe, global reach.",
-  //     icon: ai2,
-  //     side: "left",
-  //   },
-  //   {
-  //     title: "Voice Marketplace",
-  //     description:
-  //       "Turn your voice into income  list your cloned voice for others to license, use, and remix across languages and content types",
-  //     icon: ai4,
-  //     side: "right",
-  //   },
-  //   {
-  //     title: "Emotional Presets",
-  //     description:
-  //       "Add emotion to every word  choose tones like calm, excited, or serious to match your message perfectly",
-  //     icon: ai3,
-  //     side: "left",
-  //   },
-  // ];
+// const cardData = [
+//   {
+//     title: "Core Dubbing",
+//     description:
+//       "Paste any video link  Dubio dubs it in your voice, with subtitles and lip-sync. No uploads, no editing. Just magic",
+//     icon: ai,
+//     side: "left",
+//   },
+//   {
+//     title: " Shareability & Branding",
+//     description:
+//       "Every dubbed video is ready to share with one click   complete with light branding to boost your reach",
+//     icon: ai1,
+//     side: "right",
+//   },
+//   {
+//     title: "Podcast Dubbing",
+//     description:
+//       "Dub your episodes into any language same voice, same vibe, global reach.",
+//     icon: ai2,
+//     side: "left",
+//   },
+//   {
+//     title: "Voice Marketplace",
+//     description:
+//       "Turn your voice into income  list your cloned voice for others to license, use, and remix across languages and content types",
+//     icon: ai4,
+//     side: "right",
+//   },
+//   {
+//     title: "Emotional Presets",
+//     description:
+//       "Add emotion to every word  choose tones like calm, excited, or serious to match your message perfectly",
+//     icon: ai3,
+//     side: "left",
+//   },
+// ];
 
 //   return (
 //     <div className="max-w-[1920px] mx-auto pt-20 relative">
@@ -122,62 +122,62 @@
 //               ref={cardRefs[index]}
 //               className="grid grid-cols-2 gap-16 items-center min-h-[400px] relative px-40"
 //             >
-//               {/* Background Wave Image for each section */}
-//               <div className="absolute inset-0 -z-10 overflow-hidden">
-//                 {card.side === "left" ? (
-//                   <div className="absolute -left-32 top-1/2 -translate-y-1/2">
-//                     <Image
-//                       src={dubbing}
-//                       alt="background wave"
-//                       width={1200}
-//                       height={400}
-//                     />
-//                   </div>
-//                 ) : (
-//                   <div className="absolute -right-32 top-1/2 -translate-y-1/2">
-//                     <Image
-//                       src={dubbing1}
-//                       alt="background wave"
-//                       width={1200}
-//                       height={600}
-//                       className="opacity-30"
-//                     />
-//                   </div>
-//                 )}
-//               </div>
+// {/* Background Wave Image for each section */}
+// <div className="absolute inset-0 -z-10 overflow-hidden">
+//   {card.side === "left" ? (
+//     <div className="absolute -left-32 top-1/2 -translate-y-1/2">
+//       <Image
+//         src={dubbing}
+//         alt="background wave"
+//         width={1200}
+//         height={400}
+//       />
+//     </div>
+//   ) : (
+//     <div className="absolute -right-32 top-1/2 -translate-y-1/2">
+//       <Image
+//         src={dubbing1}
+//         alt="background wave"
+//         width={1200}
+//         height={600}
+//         className="opacity-30"
+//       />
+//     </div>
+//   )}
+// </div>
 
-//               {/* Left Side Content */}
-//               <div
-//                 className={`${
-//                   card.side === "left"
-//                     ? "order-1 text-left"
-//                     : "order-2 text-right"
-//                 } transition-all duration-1000 ease-out ${
-//                   visibleCards[index]
-//                     ? "transform translate-x-0 opacity-100"
-//                     : card.side === "left"
-//                     ? "transform -translate-x-full opacity-0"
-//                     : "transform translate-x-full opacity-0"
-//                 } relative z-20`}
-//               >
-//                 {/* <div className='bg-gradient-to-br from-[#2A1F3A] to-[#1A1630] p-8 rounded-3xl border border-[#7C3AED]/20 backdrop-blur-sm hover:border-[#7C3AED]/50 transition-all duration-300'> */}
-//                 <div>
-//                   {/* <div className='text-6xl mb-6'>{card.icon}</div> */}
-//                   <div
-//                     className={`${
-//                       index == 3 ? "block" : "hidden"
-//                     } border border-white/80 text-white/80 text-sm font-bold px-4 py-2 rounded-full w-max justify-self-end`}
-//                   >
-//                     Futire Phase 🚀
-//                   </div>
-//                   <h3 className="text-white text-5xl font-bold mb-4 mt-4">
-//                     {card.title}
-//                   </h3>
-//                   <p className="text-white/70 text-lg leading-relaxed">
-//                     {card.description}
-//                   </p>
-//                 </div>
-//               </div>
+// {/* Left Side Content */}
+// <div
+//   className={`${
+//     card.side === "left"
+//       ? "order-1 text-left"
+//       : "order-2 text-right"
+//   } transition-all duration-1000 ease-out ${
+//     visibleCards[index]
+//       ? "transform translate-x-0 opacity-100"
+//       : card.side === "left"
+//       ? "transform -translate-x-full opacity-0"
+//       : "transform translate-x-full opacity-0"
+//   } relative z-20`}
+// >
+//   {/* <div className='bg-gradient-to-br from-[#2A1F3A] to-[#1A1630] p-8 rounded-3xl border border-[#7C3AED]/20 backdrop-blur-sm hover:border-[#7C3AED]/50 transition-all duration-300'> */}
+//   <div>
+//     {/* <div className='text-6xl mb-6'>{card.icon}</div> */}
+//     <div
+//       className={`${
+//         index == 3 ? "block" : "hidden"
+//       } border border-white/80 text-white/80 text-sm font-bold px-4 py-2 rounded-full w-max justify-self-end`}
+//     >
+//       Futire Phase 🚀
+//     </div>
+//     <h3 className="text-white text-5xl font-bold mb-4 mt-4">
+//       {card.title}
+//     </h3>
+//     <p className="text-white/70 text-lg leading-relaxed">
+//       {card.description}
+//     </p>
+//   </div>
+// </div>
 
 //               {/* Right Side Visual */}
 //               <div
@@ -252,6 +252,8 @@ import ai1 from "../../../public/images/R@.png";
 import ai2 from "../../../public/images/R3.png";
 import ai3 from "../../../public/images/R5.png";
 import ai4 from "../../../public/images/R4.png";
+import dubbing from "../../../public/images/bgwave.png";
+import dubbing1 from "../../../public/images/bgwaveright.png";
 
 const FutureOfVoiceCards = () => {
   const [visibleCards, setVisibleCards] = useState([
@@ -419,6 +421,29 @@ const FutureOfVoiceCards = () => {
                       {card.description}
                     </p>
                   </div>
+                </div>
+
+                <div className="absolute inset-0 -z-10 ">
+                  {card.side === "left" ? (
+                    <div className="absolute -left-36 top-1/2 -translate-y-1/2">
+                      <Image
+                        src={dubbing}
+                        alt="background wave"
+                        width={1200}
+                        height={400}
+                      />
+                    </div>
+                  ) : (
+                    <div className="absolute -right-36 top-1/2 -translate-y-1/2">
+                      <Image
+                        src={dubbing1}
+                        alt="background wave"
+                        width={1200}
+                        height={600}
+                        className="opacity-30"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Visual Section */}

@@ -70,14 +70,6 @@ const ResilienceSection = () => {
           <TestimonialCard key={index} image={card.image} title={card.title} description={card.description} />
         ))}
       </div>
-
-      {/* Optional Bottom CTA */}
-      <div className="text-center mt-12 md:mt-16 lg:mt-20">
-        <p className="text-white/60 text-sm md:text-base mb-6">Ready to experience bulletproof infrastructure?</p>
-        <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 transform hover:scale-105 text-sm md:text-base">
-          Get Started Today
-        </button>
-      </div>
     </div>
   </div>
   );
