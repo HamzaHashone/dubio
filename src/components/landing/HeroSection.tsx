@@ -23,7 +23,7 @@ const HeroSection = () => {
               using AI dubbing and voice cloning — all in seconds.
             </p>
 
-            {/* Email Input and Join Waitlist Button */}
+            {/* Email Input and Join Waitlist Button ,*/}
             <div className="relative mt-10">
               <Input
                 type="email"
