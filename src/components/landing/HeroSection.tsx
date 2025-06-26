@@ -90,12 +90,12 @@ const HeroSection = () => {
                   <AnimatedButton />
                 </Button>
               </div>
+            </form>
               {message && (
                 <p className={`mt-4 text-sm ${message.includes("Successfully") ? "text-green-400" : "text-red-400"}`}>
                   {message}
                 </p>
               )}
-            </form>
           </div>
           <div className="relative max-w-full lg:col-span-1">
             {/* <div className="absolute -z-10 2xl:-top-[420px] -top-[200px] left-[130%] -translate-x-1/2 2xl:w-[2010px] 2xl:h-[1217px] w-[1010px] h-[717px] object-cover"> */}
