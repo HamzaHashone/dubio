@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import circle1 from "../../../public/images/circle.gif";
+import bgwave from "../../../public/images/bgwave.png";
 import Image from "next/image";
 import play from "../../../public/images/Play.gif";
 import { Input } from "@/components/ui/input";
@@ -58,10 +59,12 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="max-w-[1920px] mx-auto h-max lg:py-0 py-32 lg:h-[100vh] flex items-center">
+    <div className="max-w-[1920px] mx-auto h-max lg:py-0 py-32 lg:h-[100vh] flex items-center relative">
+      <Image src={bgwave} alt="Dubio" width={1000} height={500} className="absolute top-20 left-0" />
       <div className="max-w-[85%] mx-auto">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-40 ">
-          <div className="text-center lg:text-start my-auto lg:col-span-1 lg:mt-0 sm:mt-88 mt-52">
+          <div className="text-center lg:text-start my-auto lg:col-span-1 lg:mt-0 sm:mt-88 mt-52 relative">
+           
             <h1 className="text-white 2xl:text-6xl lg:text-4xl md:text-4xl sm:text-3xl font-bold">
               Dub Your Content into Any Language In Your Own Voice
             </h1>
