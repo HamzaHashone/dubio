@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import BottomHeroIcon from "@/images/BottomHere1.png";
+import BottomHeroIcon from "../../../public/images/BottomHere1.png";
 
 const BuiltInSection = () => {
   return (

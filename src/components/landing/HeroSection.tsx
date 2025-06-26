@@ -1,18 +1,18 @@
 import React from "react";
-import circle1 from "@/images/circle.gif";
+import circle1 from "../../../public/images/circle.gif";
 import Image from "next/image";
-import play from "../../images/Play.gif";
+import play from "../../../public/images/Play.gif";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import playLeft from "@/images/Playleft.png";
-import playRight from "@/images/playRight.png";
+import playLeft from "../../../public/images/Playleft.png";
+import playRight from "../../../public/images/playRight.png";
 import AnimatedButton from "../ui/AnimatedButton";
 
 const HeroSection = () => {
   return (
     <div className="max-w-[1920px] mx-auto h-[100vh] flex items-center">
       <div className="max-w-[85%] mx-auto">
-        {/* <div className="grid lg:grid-cols-2 gap-40 "> */}
+        <div className="grid lg:grid-cols-2 gap-40 ">
           <div className="my-auto">
             <h1 className="text-white 2xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl font-bold">
               Dub Your Content into Any Language In Your Own Voice
@@ -67,7 +67,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </div>
     </div>
   );

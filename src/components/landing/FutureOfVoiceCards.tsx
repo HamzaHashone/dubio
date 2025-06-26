@@ -2,13 +2,13 @@
 
 // import Image from "next/image";
 // import React, { useEffect, useRef, useState } from "react";
-// import dubbing from "@/images/bgwave.png";
-// import dubbing1 from "@/images/bgwaveright.png";
-// import ai from "@/images/R1.png";
-// import ai1 from "@/images/R@.png";
-// import ai2 from "@/images/R3.png";
-// import ai3 from "@/images/R5.png";
-// import ai4 from "@/images/R4.png";
+// import dubbing from "../../../public/images/bgwave.png";
+// import dubbing1 from "../../../public/images/bgwaveright.png";
+// import ai from "../../../public/images/R1.png";
+// import ai1 from "../../../public/images/R@.png";
+// import ai2 from "../../../public/images/R3.png";
+// import ai3 from "../../../public/images/R5.png";
+// import ai4 from "../../../public/images/R4.png";
 // const FutureOfVoiceCards = () => {
 //   const [visibleCards, setVisibleCards] = useState([
 //     false,
@@ -247,11 +247,11 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import ai from "@/images/R1.png";
-import ai1 from "@/images/R@.png";
-import ai2 from "@/images/R3.png";
-import ai3 from "@/images/R5.png";
-import ai4 from "@/images/R4.png";
+import ai from "../../../public/images/R1.png";
+import ai1 from "../../../public/images/R@.png";
+import ai2 from "../../../public/images/R3.png";
+import ai3 from "../../../public/images/R5.png";
+import ai4 from "../../../public/images/R4.png";
 
 const FutureOfVoiceCards = () => {
   const [visibleCards, setVisibleCards] = useState([

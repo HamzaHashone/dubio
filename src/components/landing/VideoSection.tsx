@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import sound from "@/images/sound.png";
-import language from "@/images/countryname.png";
+import sound from "../../../public/images/sound.png";
+import language from "../../../public/images/countryname.png";
 
 const VideoSection = () => {
   return (

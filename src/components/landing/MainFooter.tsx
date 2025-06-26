@@ -3,7 +3,7 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import AnimatedButton from "../ui/AnimatedButton";
-import logo from "@/images/UpdatedLogo.png";
+import logo from "../../../public/images/UpdatedLogo.png";
 import Image from "next/image";
 const MainFooter = () => {
   return (

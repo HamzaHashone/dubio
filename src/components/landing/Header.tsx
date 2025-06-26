@@ -1,7 +1,7 @@
 // import Link from 'next/link'
 // import React from 'react'
 // import AnimatedButton from '../ui/AnimatedButton'
-// import logo from "@/images/UpdatedLogo.png";
+// import logo from "../../../public/images/UpdatedLogo.png";
 // import Image from 'next/image';
 
 // // const Header = () => {
@@ -137,7 +137,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import AnimatedButton from "../ui/AnimatedButton";
-import logo from "@/images/UpdatedLogo.png";
+import logo from "../../../public/images/UpdatedLogo.png";
 import Image from "next/image";
 
 // const Header = () => {

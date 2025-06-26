@@ -1,8 +1,8 @@
 import React from "react";
-import T1 from "@/images/t1.png";
-import T2 from "@/images/icon2.png";
-import T3 from "@/images/T3.png";
-import T4 from "@/images/icon4.png";
+import T1 from "../../public/images/t1.png";
+import T2 from "../../public/images/icon2.png";
+import T3 from "../../public/images/T3.png";
+import T4 from "../../public/icon4.png";
 import TestimonialCard from "./landing/Testimonial Card";
 const ResilienceSection = () => {
   const cardData = [

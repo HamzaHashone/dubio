@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import step2 from "@/images/section2.png";
-import step1 from "@/images/section1.png";
-import step3 from "@/images/section3.png";
+import step2 from "../../../public/images/section2.png";
+import step1 from "../../../public/images/section1.png";
+import step3 from "../../../public/images/section3.png";
 
 const HowItsWork = () => {
   // const steps = [
