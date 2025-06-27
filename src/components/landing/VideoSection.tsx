@@ -67,41 +67,47 @@ const VideoSection = () => {
                {/* Enhanced Video Placeholder - Increased Size */}
                <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl aspect-video bg-gradient-to-br from-[#0a0724] via-[#1a1530] to-[#0a0724] rounded-xl sm:rounded-2xl border border-[#7C3AED]/40 mb-6 sm:mb-8 flex items-center justify-center overflow-hidden shadow-xl sm:shadow-2xl shadow-purple-500/20">
                  
-                 {/* Enhanced Animated waveform background */}
-                 <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-purple-900/30 animate-pulse"></div>
+                 {/* Background Image Placeholder */}
+                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
+                   {/* You can replace this with an actual image */}
+                                       <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-75"></div>
+                   
+                   {/* Dark overlay for text readability */}
+                   <div className="absolute inset-0 bg-black/50"></div>
+                 </div>
                  
-                 {/* Additional wave layers */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-transparent via-cyan-900/10 to-transparent"></div>
-                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-900/10 to-transparent"></div>
-                 
-                                   {/* Floating particles - Responsive sizing */}
-                  <div className="absolute top-2 sm:top-4 left-2 sm:left-4 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-white/40 rounded-full animate-ping"></div>
-                  <div className="absolute top-4 sm:top-8 right-4 sm:right-8 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-purple-400/60 rounded-full animate-bounce"></div>
-                  <div className="absolute bottom-3 sm:bottom-6 left-4 sm:left-8 w-0.5 h-0.5 sm:w-1 sm:h-1 bg-blue-400/40 rounded-full animate-pulse"></div>
-                  
-                  {/* Enhanced Play Button - Increased Size */}
-                  <div className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] rounded-full flex items-center justify-center group hover:from-[#6D28D9] hover:to-[#5B21B6] transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 hover:scale-110">
-                    {/* Play icon - Increased Size */}
-                    <div className="w-0 h-0 border-l-[18px] sm:border-l-[24px] md:border-l-[28px] lg:border-l-[32px] border-l-white border-t-[11px] sm:border-t-[14px] md:border-t-[16px] lg:border-t-[18px] border-t-transparent border-b-[11px] sm:border-b-[14px] md:border-b-[16px] lg:border-b-[18px] border-b-transparent ml-0.5 sm:ml-1 group-hover:border-l-[20px] sm:group-hover:border-l-[26px] md:group-hover:border-l-[30px] lg:group-hover:border-l-[34px] transition-all duration-300"></div>
-                    
-                    {/* Ring effect */}
-                    <div className="absolute inset-0 rounded-full border border-white/20 sm:border-2 animate-ping"></div>
-                  </div>
+                 {/* Content Overlay */}
+                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-4 text-center">
+                   
+                   {/* Main Headline */}
+                   <h3 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 leading-tight max-w-md">
+                     What If Your Voice<br />
+                     <span className="text-purple-400">Could Cross Borders?</span>
+                   </h3>
 
-                                   {/* Enhanced Teaser Coming Soon Overlay - Responsive */}
-                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4">
-                    <div className="bg-black/60 backdrop-blur-md rounded-lg sm:rounded-xl px-2 sm:px-4 py-2 sm:py-3 border border-purple-500/20">
-                      <p className="text-white text-xs sm:text-sm font-medium tracking-wide">Teaser coming soon</p>
-                      <div className="w-full h-0.5 sm:h-1 bg-gray-700 rounded-full mt-1 sm:mt-2 overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse w-3/4"></div>
-                      </div>
-                    </div>
-                  </div>
+                   {/* Play Button */}
+                   <div className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] rounded-full flex items-center justify-center group hover:from-[#6D28D9] hover:to-[#5B21B6] transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 hover:scale-110 mb-6">
+                     {/* Play icon */}
+                     <div className="w-0 h-0 border-l-[18px] sm:border-l-[24px] md:border-l-[28px] border-l-white border-t-[11px] sm:border-t-[14px] md:border-t-[16px] border-t-transparent border-b-[11px] sm:border-b-[14px] md:border-b-[16px] border-b-transparent ml-1 transition-all duration-300"></div>
+                     
+                     {/* Ring effect */}
+                     <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"></div>
+                   </div>
 
-                  {/* Enhanced Animated pulse effects - Responsive */}
-                  <div className="absolute inset-0 border border-[#7C3AED]/40 sm:border-2 rounded-xl sm:rounded-2xl animate-pulse"></div>
-                  <div className="absolute inset-0 border border-purple-400/20 rounded-xl sm:rounded-2xl animate-ping"></div>
-                </div>
+                 </div>
+
+                 {/* Bottom CTA Overlay */}
+                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
+                   <div className="text-center">
+                     <p className="text-white text-sm sm:text-base font-semibold mb-1">
+                       Join the Dubio Waitlist → <span className="text-purple-400">Early Access Coming Soon</span>
+                     </p>
+                   </div>
+                 </div>
+
+                 {/* Enhanced Animated pulse effects - Responsive */}
+                 <div className="absolute inset-0 border border-[#7C3AED]/40 sm:border-2 rounded-xl sm:rounded-2xl animate-pulse"></div>
+               </div>
 
                {/* Tagline - Responsive */}
                <p className="text-white/80 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-xs sm:max-w-md px-2">
