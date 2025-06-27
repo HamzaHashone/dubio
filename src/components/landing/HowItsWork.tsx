@@ -60,7 +60,7 @@ const HowItsWork = () => {
   // ];
   return (
     <div className="max-w-[1920px] mx-auto">
-      <div className="lg:max-w-[85%] w-max mx-auto">
+      <div className="md:max-w-[85%] px-4 md:px-0 mx-auto">
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
           How It&apos;s Work
         </h2>
@@ -68,7 +68,7 @@ const HowItsWork = () => {
         <div className="grid lg:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
           {/* Step 1 - Functional Video Preview */}
           <div className="flex flex-col items-center justify-between gap-2 lg:gap-5 relative">
-            <div className="flex flex-col items-center mb-5">
+            <div className="flex flex-col items-center mb-10">
               <div className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-2 lg:mb-6">
                 <span className="text-white text-lg lg:text-2xl font-bold">1</span>
               </div>
@@ -81,9 +81,9 @@ const HowItsWork = () => {
             </div>
 
             {/* Video Preview Container */}
-            <div className="w-[350px] mx-auto relative bg-cover bg-center rounded-lg bg-no-repeat h-[270px]" style={{ backgroundImage: `url(${step2.src})` }}>
+            <div className="mx-auto bg-cover relative bg-center rounded-lg bg-no-repeat md:h-[400px] lg:h-[270px] h-[350px] w-[350px]" style={{ backgroundImage: `url(${step2.src})` }}>
               {/* Video Player Area */}
-              <div className="bg-gray-900 rounded-lg overflow-hidden mb-4 aspect-video absolute z-10 lg:w-[250px] lg:h-[180px] lg:-top-17 lg:-right-0">
+              <div className="bg-gray-900 rounded-lg overflow-hidden mb-4 aspect-video absolute right-0 top-0 lg:-top-10 lg:w-[250px] w-full md:w-full">
                
                   {videoId ? (
                     <img
@@ -113,7 +113,7 @@ const HowItsWork = () => {
                   value={videoUrl}
                   onChange={handleUrlChange}
                   placeholder="Paste video URL"
-                  className="lg:w-[320px] w-full h-[50px] pl-10 pr-4 py-3 border bg-[A6A6A6] border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent transition-all duration-200 absolute lg:left-20 lg:-bottom-70 -bottom-65 lg:-translate-x-1/2 lg:-translate-y-1/2"
+                  className="lg:w-[320px] w-full h-[50px] pl-10 pr-4 py-3 border bg-[A6A6A6] border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent transition-all duration-200 absolute lg:left-20 lg:-bottom-70 md:-bottom-100 -bottom-85 lg:-translate-x-1/2 lg:-translate-y-1/2"
                 />
                  {/* <div className="absolute bottom-0 pl-3 flex items-center pointer-events-none">
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ const HowItsWork = () => {
                 </div> */}
               </div>
             </div>
-          </div>
+          </div> 
 
           {/* Step 2 */}
           <div className="flex flex-col items-center justify-between gap-2 lg:gap-5">
