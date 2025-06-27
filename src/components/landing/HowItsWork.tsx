@@ -1,10 +1,37 @@
+"use client"
+
 import Image from "next/image";
-import React from "react";
-import step2 from "../../../public/images/section2.png";
+import React, { useState } from "react";
 import step1 from "../../../public/images/section1.png";
+import step2 from "../../../public/images/bgstep1.png";
 import step3 from "../../../public/images/section3.png";
 
 const HowItsWork = () => {
+  const [videoUrl, setVideoUrl] = useState("");
+  const [videoId, setVideoId] = useState("");
+
+  // Function to extract YouTube video ID from URL
+  const extractVideoId = (url: string) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+  };
+
+  // Handle URL input change
+  const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const url = e.target.value;
+    setVideoUrl(url);
+    
+    if (url) {
+      const id = extractVideoId(url);
+      if (id) {
+        setVideoId(id);
+      }
+    } else {
+      setVideoId("");
+    }
+  };
+
   // const steps = [
   //   {
   //     number: 1,
@@ -38,8 +65,8 @@ const HowItsWork = () => {
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-10 md:gap-16">
-          {/* Step 1 */}
-          <div className="flex flex-col items-center justify-between gap-2 lg:gap-5 ">
+          {/* Step 1 - Functional Video Preview */}
+          <div className="flex flex-col items-center justify-between gap-2 lg:gap-5 relative">
             <div className="flex flex-col items-center mb-5">
               <div className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-[#7C3AED] rounded-full flex items-center justify-center mx-auto mb-2 lg:mb-6">
                 <span className="text-white text-lg lg:text-2xl font-bold">1</span>
@@ -51,13 +78,47 @@ const HowItsWork = () => {
                 Paste your YouTube link and dub it now.
               </p>
             </div>
-            <Image
-              src={step2}
-              alt="step1"
-              width={480}
-              height={450}
-              className=""
-            />
+
+            {/* Video Preview Container */}
+            <div className="w-full max-w-md mx-auto relative bg-cover bg-center bg-no-repeat lg:h-[300px]" style={{ backgroundImage: `url(${step2.src})` }}>
+              {/* Video Player Area */}
+              <div className="bg-gray-900 rounded-lg overflow-hidden mb-4 aspect-video relative z-10 lg:w-[306px] lg:h-[200px] lg:-top-20 lg:-right-50">
+               
+                  {videoId ? (
+                    <img
+                      src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                      alt="Video thumbnail"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-400">
+                      <div className="text-center">
+                        <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 002 2v8a2 2 0 002 2z" />
+                        </svg>
+                        <p className="text-sm">Video preview will appear here</p>
+                      </div>
+                    </div>
+                  )}
+              
+              </div>
+
+              {/* URL Input */}
+              <div className="relative">
+                <div className="absolute inset-y-8 -inset-x-20 pl-3 flex items-center pointer-events-none">
+                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  </svg>
+                </div>
+                <input
+                  type="url"
+                  value={videoUrl}
+                  onChange={handleUrlChange}
+                  placeholder="Paste video URL"
+                  className="lg:w-[320px] w-full h-full md:h-[50px] pl-10 pr-4 py-3 border bg-[A6A6A6] border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent transition-all duration-200 lg:absolute lg:left-20 lg:-bottom-20 lg:-translate-x-1/2 lg:-translate-y-1/2"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Step 2 */}
