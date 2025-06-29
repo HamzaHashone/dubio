@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import step1 from "../../../public/images/section1.png";
+import step1 from "../../../public/images/language.png";
 import step2 from "../../../public/images/bgstep1.png";
 import step3 from "../../../public/images/section3.png";
 import step from "../../../public/images/step1.png";
